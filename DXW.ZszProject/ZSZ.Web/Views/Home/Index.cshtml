@@ -163,11 +163,11 @@
                 </div>
             </div>
 
-            <!-- Sidebar Menu -->
+            <!-- 左侧主导航栏 -->
             <nav class="mt-2">
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                     <!-- Add icons to the links using the .nav-icon class
-                    with font-awesome or any other icon font library -->
+    with font-awesome or any other icon font library -->
                     <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link active">
                             <i class="nav-icon fa fa-dashboard"></i>
@@ -200,6 +200,29 @@
                             </p>
                         </a>
                     </li>
+                    <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link">
+                            <i class="nav-icon fa fa-dashboard"></i>
+                            <p>
+                                系统管理
+                                <i class="right fa fa-angle-left"></i>
+                            </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link" _target="/System/MenuManage">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>菜单管理</p>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                    <i class="fa fa-circle-o nav-icon"></i>
+                                    <p>Inactive Page</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
             <!-- /.sidebar-menu -->
@@ -209,7 +232,7 @@
 
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
-        <iframe id="menuFrame" name="menuFrame" src="/MailManage/TemplateAddPage" style="overflow:visible;" scrolling="auto" frameborder="0" width="100%"
+        <iframe id="menuFrame" name="menuFrame" src="/System/MenuManage" style="overflow:visible;background: #f4f6f9;" scrolling="auto" frameborder="0" width="100%"
                 height="100%"></iframe>
     </div>
     <!-- /.content-wrapper -->

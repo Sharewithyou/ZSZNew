@@ -1,0 +1,11 @@
+﻿
+/*主容器*/
+
+body {
+    background-color: #f4f6f9;
+}
+
+.home-content {
+    padding: 0 .5rem;
+    margin-top: 10px;
+}

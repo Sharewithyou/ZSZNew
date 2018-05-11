@@ -15,30 +15,55 @@ namespace ZSZ.Web.App_Start
 
             //ResetIgnorePatterns(bundles.IgnoreList);
 
+            //--------------------------- css 绑定 --------------------------------
+
             bundles.Add(new StyleBundle("~/css/adminlte").Include(
                         "~/Content/plugins/font-awesome/css/font-awesome.min.css",
-                        "~/Content/css/adminlte.min.css"));
+                        "~/Content/css/adminlte.min.css",
+                        "~/Content/plugins/spin.js-4.0.0/spin.css"
+                        ));
+
+            //页面样式
+            bundles.Add(new StyleBundle("~/css/page/css").Include(
+                        "~/Content/css/pages/homePage.css"));
+
+
+
+            //----------------------------- js 绑定 -------------------------------
+
+            // cdn 链接
 
             var jqueryCdn = "https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js";
 
             var bootstrapBundleCdn = "https://cdn.bootcss.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js";
 
+            // jQuery 
+
             bundles.Add(new ScriptBundle("~/bundles/jquery", jqueryCdn).Include(
                         "~/Content/plugins/jquery/jquery.min.js"));
 
+            // bootstrap 4
             bundles.Add(new ScriptBundle("~/bundles/bootstrap4", bootstrapBundleCdn).Include(
                        "~/Content/plugins/bootstrap/js/bootstrap.bundle.min.js"));
 
+            // adminlte
 
             bundles.Add(new ScriptBundle("~/bundles/adminlte").Include(
                          "~/Content/js/adminlte.min.js",
                          "~/Content/js/pages/home.js"));
 
+            // ckeditor
             bundles.Add(new ScriptBundle("~/bundles/ckeditor4").Include(
                          "~/Content/plugins/ckeditor_full/ckeditor.js"));
 
+            // spin loading
+            bundles.Add(new ScriptBundle("~/bundles/spin").Include(
+                         "~/Content/plugins/spin/spin.js",
+                          "~/Content/plugins/spin/spinInit.js"
+                         ));
 
-            BundleTable.EnableOptimizations = true;  //是否打包压缩
+
+            BundleTable.EnableOptimizations = false;  //是否打包压缩
 
         }
 
